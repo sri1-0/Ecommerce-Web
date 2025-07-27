@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sri Amman Batteries</title>
+  <style>
+    #companyname {
+      border: 1px solid black;
+      height: 100px;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 300%;
+      background-image: url("../image/blue\ batter.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      padding: 5px;
+      margin-top: -20px;
+      border: solid 5px black;
+      word-spacing: 300px;
+      font-size: larger;
+      background-color: brown;
+
+    }
+
+    #anchor {
+      text-decoration: none;
+      color: aliceblue;
+      font-size: x-large;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .product {
+      display: inline-block;
+      border: 2px solid black;
+      min-height: 300px;
+      width: 200px;
+      background-color: antiquewhite;
+      padding: 50px;
+      margin: 20px;
+      margin-left: 0px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+
+    .img {
+      height: 200px;
+      width: 200px;
+    }
+
+    .productpage {
+      color: black;
+      font-size: medium;
+    }
+
+    .productpage:hover {
+      text-decoration: underline;
+    }
+
+    svg {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      margin-left: 100px;
+      margin-top: 8px;
+    }
+    .but{
+            background-color: aquamarine;
+           
+            border-radius: 10px;
+            box-shadow: 3px 2px blue;
+        }
+  </style>
+</head>
+
+<body onload="cartcount()">
+  <h1 id="companyname">SRI AMMAN BATTERIES</h1>
+  <div class="nav">
+    <nav>
+      <a href="HomePage.html" id="anchor"> Home </a>
+      <a href="Service.html" id="anchor"> Service </a>
+      <a href="PerfectLogin.html" id="anchor"> Login </a>
+      <a href="PerfecetContact.html" id="anchor"> contact </a>
+      <a href="cart.html"><svg id="cart_logo" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+          <path
+            d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z">
+        </svg></a>
+      <span id="cart-count" style="
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    background: white;
+    color: red;
+    border-radius: 50%;
+    padding: 1px 4px;
+    font-size: 15px;
+    font-weight:bold;
+  ">0</span>
+    </nav>
+  </div>
+  <div class="productlayer1">
+    <div class="product">
+      <a href="productdeatail.html" class="productpage" onclick="passproduct(1)">
+        <table>
+          <div id="displayarea1">
+
+          </div>
+          <th>AMARON CURRENT Short Tubular Battery</th>
+
+      </table> </a>
+      <p>price:: Rs.<span id="productprice">12000</span> </p>
+      <button onclick="addproducttocart(1)" class="but"> add to cart</button>
+      <button onclick="passsingleproducttobuypage(1)" class="but"><a href="singlebuy.html">buy</a></button>
+
+    </div>
+
+    <!-- second product -->
+
+   <div class=" product">
+            <a href="productdeatail.html" class="productpage" onclick="passproduct(2)">
+              <table>
+                <div id="displayarea2">
+
+                </div>
+                <th >AMARON CURRENT Short Tubular Battery</th>
+
+              </table>
+            </a>
+            <p>price:: Rs.<span id="productprice">12000</span> </p>
+      <button onclick="addproducttocart(2)" class="but"> add to cart</button>
+      <button onclick="passsingleproducttobuypage(2)" class="but"><a href="singlebuy.html">buy</a></button>
+
+    </div>
+
+    <!-- third product -->
+    <div class="product">
+      <a href="productdeatail.html" class="productpage" onclick="passproduct(3)">
+        <table>
+          <div id="displayarea3">
+
+          </div>
+          <th >AMARON CURRENT Short Tubular Battery</th>
+
+        </table>
+      </a>
+      <p>price:: Rs.<span id="productprice">12000</span> </p>
+      <button onclick="addproducttocart(3)" class="but"> add to cart</button>
+      <button onclick="passsingleproducttobuypage(3)" class="but"><a href="singlebuy.html">buy</a></button>
+
+    </div>
+    <!-- fourth product -->
+    <div class="product">
+      <a href="productdeatail.html" class="productpage" onclick="passproduct(4)">
+        <table>
+          <div id="displayarea4">
+
+          </div>
+          <th >AMARON CURRENT Short Tubular Battery</th>
+
+        </table>
+      </a>
+      <p>price:: Rs.<span id="productprice">12000</span> </p>
+      <button onclick="addproducttocart(4)" class="but"> add to cart</button>
+      <button onclick="passsingleproducttobuypage(4)" class="but"><a href="singlebuy.html">buy</a></button>
+
+    </div>
+  </div>
+
+  <div class="productlayer2">
+    <div class="product">
+      <a href="productdeatail.html" class="productpage" onclick="passproduct(5)">
+        <table>
+          <div id="displayarea5">
+          </div>
+          <th >AMARON CURRENT Short Tubular Battery</th>
+
+        </table>
+      </a>
+      <p>price:: Rs.<span id="productprice">12000</span> </p>
+      <button onclick="addproducttocart(5)" class="but"> add to cart</button>
+      <button onclick="passsingleproducttobuypage(5)" class="but"><a href="singlebuy.html">buy</a></button>
+
+    </div>
+
+    <!-- second product -->
+
+    <div class="product">
+      <a href="productdeatail.html" class="productpage" onclick="passproduct(6)">
+        <table>
+          <div id="displayarea6">
+
+          </div>
+          <th >AMARON CURRENT Short Tubular Battery</th>
+
+        </table>
+      </a>
+      <p>price:: Rs.<span id="productprice">12000</span> </p>
+      <button onclick="addproducttocart(6)" class="but"> add to cart</button>
+      <button onclick="passsingleproducttobuypage(6)" class="but"><a href="singlebuy.html">buy</a></button>
+
+    </div>
+
+    <!-- third product -->
+    <div class="product">
+      <a href="productdeatail.html" class="productpage" onclick="passproduct(7)">
+        <table>
+          <div id="displayarea7">
+
+          </div>
+          <th >AMARON CURRENT Short Tubular Battery</th>
+
+        </table>
+      </a>
+      <p>price:: Rs.<span id="productprice">12000</span> </p>
+      <button onclick="addproducttocart(7)" class="but"> add to cart</button>
+      <button onclick="passsingleproducttobuypage(7)" class="but"><a href="singlebuy.html">buy</a></button>
+
+    </div>
+    <!-- fourth product -->
+    <div class="product">
+      <a href="productdeatail.html" class="productpage" onclick="passproduct(8)">
+        <table>
+          <div id="displayarea8">
+
+    
+          </div>
+          <th id="productname">AMARON CURRENT Short Tubular Battery</th>
+
+        </table>
+      </a>
+      <p>price:: Rs.<span id="productprice">12000</span> </p>
+      <button onclick="addproducttocart(8)" class="but"> add to cart</button>
+      <button onclick="passsingleproducttobuypage(8)" class="but"><a href="singlebuy.html">buy</a></button>
+
+    </div>
+
+  </div>
+
+  <script>
+    function clearsinproduct(){
+    localStorage.removeItem('singleproduct');
+   }
+    function passsingleproducttobuypage(num) {
+      clearsinproduct();
+      const singleproduct = JSON.parse(localStorage.getItem('singleproduct')) || [];
+      var prodimgsrc = document.getElementById('passimgname' + num).getAttribute('src');
+      var productname = document.getElementById('productname').textContent;
+      var productprice = parseInt(document.getElementById('productprice').textContent);
+      singleproduct.push({
+        itemimg: prodimgsrc,
+        itemname: productname,
+        itemprice: productprice
+      });
+      localStorage.setItem('singleproduct',JSON.stringify(singleproduct));
+    }
+
+    const prod = JSON.parse(localStorage.getItem('productdeatail')) || [];
+    function addproducttocart(num) {
+     
+      var prodimgsrc = document.getElementById('passimgname' + num).getAttribute('src');
+      var productname = document.getElementById('productname').textContent;
+      var productprice = parseInt(document.getElementById('productprice').textContent);
+      prod.push({
+        itemimg: prodimgsrc,
+        itemname: productname,
+        itemprice: productprice
+      });
+
+
+      localStorage.setItem('productdeatail', JSON.stringify(prod));
+      cartcount();
+    }
+
+
+    function passproduct(num) {
+      const prod = JSON.parse(localStorage.getItem('service')) || [];
+      var prodimgsrc = document.getElementById('passimgname' + num).getAttribute('src');
+      prod.push({ img: prodimgsrc });
+      localStorage.setItem('service', JSON.stringify(prod));
+    }
+
+
+    const things = ['../image/cctv.jpeg', '../image/blue batter.jpg', '../image/upsbattery.jpeg',
+      '../image/Battery1.jpg', '../image/onlinecctv.jpg', '../image/wallcctv.jpeg', '../image/car1.jpg', '../image/charge.avif'
+    ];
+
+    for (let i = 0; i < things.length; i++) {
+      const area = document.getElementById('displayarea' + (i + 1));
+      if (area) {
+        area.innerHTML = "";
+        area.innerHTML = ` <img class="img" src="${things[i]}" alt="img not available" id="passimgname${(i + 1)}"/>`;
+      } else {
+        alert(`displayarea${i + 1} not found `);
+      }
+
+    }
+
+    function cartcount() {
+      const count_area = document.getElementById('cart-count');
+      if (count_area) {
+        count_area.textContent = prod.length;
+      }
+    }
+
+     
+  </script>
+</body>
+
+</html>

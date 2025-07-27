@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 100px;
+            width: 100px;
+        }
+#container{
+    border: 1px solid black;
+    width: 450px;
+    height: 460px;
+    margin-left:70vh;
+    margin-top: 10vh;
+    background-color: rgba(255, 0, 0, 0.753);
+}
+form{
+   margin-left: 30px;
+   font-size: larger;
+   font-weight: 800;
+   color: antiquewhite;
+}
+.dandadan {
+    display: none;
+    position: absolute;
+    background-color: rgba(242, 148, 148, 0.439) ;
+    margin-left: 15px;
+    padding: 10px;
+}
+.dandadan a{
+    color:rgb(71, 15, 238);
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+.head:hover .dandadan{
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+    </style>
+</head>
+<body >
+    <a href="HomePage.html">back to home</a>
+    <div id="container">
+    <h2 style="text-align: center;">SELECT YOUR PAYMENT METHOD</h2>
+    <div>
+        <form action="">
+            <table>
+                <tbody>
+                    <tr><td style="column-count:2;"><img src="../image/creditcard.jpg"></td>
+                    <td ><a href="carddeatails.html">credit card</a></td></tr>
+                    <tr><td><img src="../image/debitcard.webp"></td><td><a href="carddeatails.html">debit card</a></td></tr>
+                    <tr><td><img src="../image/paytmimg.png" ></td>
+                        <td><span class="head">pay with upi
+                            <div class="dandadan">
+                                <a href="payupi.html">paytm</a>
+                                <a href="payupi.html">google pay</a>
+                                <a href="payupi.html">phone pay</a>
+                            </div>
+                        </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+    </div>
+
+    <script>
+       
+    </script>
+</body>
+</html>

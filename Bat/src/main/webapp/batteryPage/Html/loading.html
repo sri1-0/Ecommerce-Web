@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #body{
+            background-image: url(../image/moneuytobank.webp);
+            background-position-y: -50px;
+            background-size: cover;
+        }
+        #bar{
+            text-align: center;
+            height: 20px;
+            width: 0%;
+            border-radius: 30px;
+            background-color: aqua;
+            transition: 0.1s;
+        }
+        #container{
+            margin-left:500px;
+            margin-top: 200px;
+            height: 150px;
+            width: 400px;
+            font-size: xx-large;
+            text-align: center;
+            background-color:rgb(180, 116, 239);
+            border: 2px solid white;
+            border-radius: 30px;
+            box-shadow: 8px 8px rgba(140, 27, 181, 0.686);
+
+        }
+        #barcontain{
+            padding: 20px;
+            text-align: center;
+        }
+        svg{
+        height: 70px;
+        width: 70px;
+        fill: aliceblue;
+}
+
+    </style>
+</head>
+<body id="body">
+    <a href="HomePage.html">Home</a>
+    <div id="container">
+        <div id="loader">payment processing pls wait</div>
+    <div id="barcontain">0%<div id="bar" ></div></div>
+    <div id="done"> payment done!! order placed...! <br> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+        </div>
+    </div>
+    <script>
+
+        setTimeout(function(){
+            document.getElementById('done').style.display='none';
+            document.getElementById('loader').style.display='block';
+        },0);
+        setTimeout(function(){
+            document.getElementById('loader').style.display='none';
+            document.getElementById('barcontain').style.display='none';
+            document.getElementById('done').style.display='block';
+        },5800);
+        let progress=0;
+              const  loadbar=document.getElementById('bar');
+              const  barcontain=document.getElementById('barcontain');
+
+        const interval=setInterval(()=>{
+            if(progress>=100){
+                interval=0;
+            }
+            else{
+                progress++;
+                barcontain.innerHTML=`${progress}% <div id="bar" style="width:${progress}%";></div>`;
+            }
+
+        },50);
+    </script>
+</body>
+</html>

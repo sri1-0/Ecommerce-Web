@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Bat</display-name>
+  <welcome-file-list>
+    <welcome-file>PerfectLogin.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>ControllServe</servlet-name>
+  <servlet-class>com.batteryServe.ControllServe</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ControllServe</servlet-name>
+  <url-pattern>/submitform</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+  <servlet-name>ControllServe</servlet-name>
+  <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+      <servlet-mapping>
+  <servlet-name>ControllServe</servlet-name>
+  <url-pattern>/updateuser</url-pattern>
+  </servlet-mapping>
+        <servlet-mapping>
+  <servlet-name>ControllServe</servlet-name>
+  <url-pattern>/updateexistinguser</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+  <servlet-name>ControllServe</servlet-name>
+  <url-pattern>/modifyuser</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+  <servlet-name>ControllServe</servlet-name>
+  <url-pattern>/adminlogin</url-pattern>
+  </servlet-mapping>
+     <servlet-mapping>
+  <servlet-name>ControllServe</servlet-name>
+  <url-pattern>/userupdate</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

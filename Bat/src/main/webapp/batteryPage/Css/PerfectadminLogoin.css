@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+
+}
+ h1 {
+      text-align: center;
+    }
+
+    .head {
+      margin-top: 20px;
+      display: flex;  
+      justify-content: space-between;
+
+    }
+    
+
+    .head li {
+      display: inline;
+      padding-right: 20px;
+    }
+
+  .Com-Name{
+      color:rgb(11, 176, 226);
+      position: relative;
+      margin-left: 20px;
+      margin-top: 0px;
+      font-weight: bold;
+      font-size: 50px;
+      overflow: hidden;
+    }
+  .Com-Name::before {
+      position: absolute;
+      content: "";
+      background-color: rgb(229, 251, 121);
+      width: 0%;
+      height: 100%;
+      transition: 1s;
+     }
+
+    .Com-Name:hover::before {
+      background-color: transparent;
+      border-radius: 60%;
+      width:90%;
+      }
+
+    .Com-Name:hover{
+    color: rgb(229, 251, 121);
+   }
+   .head a{
+      color: rgb(11, 176, 226);
+      position: relative;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: x-large;
+      font-weight: bold;
+      overflow: hidden;
+    }
+
+    .head a::before {
+      position: absolute;
+      content: "";
+      background-color: rgb(229, 251, 121);
+      width: 0%;
+      height: 100%;
+      overflow: hidden;
+      transition: 1s;
+
+    }
+
+    .head a:hover::before {
+      background-color: transparent;
+      border-radius: 60%;
+      width:90%;
+      height: 100%;
+      z-index: 1;
+
+    }
+
+    .head a:hover,
+    .head a.active {
+    color: rgb(208, 245, 20);
+   }
+ section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    
+}
+.bodybg{
+background-image: url(../image/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: animateBg 5s linear infinite;
+}
+@keyframes animateBg {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.log{
+    background-color:transparent;
+    backdrop-filter: blur(15px);
+    border: 1px solid seashell ;
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+}
+h3{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+.input-area{
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid wheat;
+
+}
+   .input-area label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform :translateY(-50%);
+    font-size: 1em;
+    color: white;
+    /* pointer-events: none; */
+}
+.input-area input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 8px 0 5px;
+}
+ /*1. when input feild focused lable feid moved otherwise it back to its original position
+ 2. when an input feild valid then only the label does not move but the valid also invalid its moved*/
+.input-area input:focus~label,
+.input-area input:valid~label
+{
+    top: -5px;
+}
+.remember-forget{
+   margin: -15px 0 15px ;
+   font-size: .9em;
+   color: aliceblue;
+   display: flex;
+   justify-content: space-between;
+    
+}
+.remember-forget label input {
+    margin-right: 3px;
+    margin-left: 5px;
+}
+.remember-forget a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.remember-forget a:hover{
+    text-decoration: underline;
+}
+button{
+    height: 40px;
+    width: 310px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.regis-link{
+    font-size: .9em;
+    margin: 25px;
+    color: aliceblue;
+    text-align: center;
+}
+.regis-link p a {
+text-decoration: none;
+color: aliceblue;
+font-weight: 600;
+font-size:large;
+}
+.regis-link p a:hover{
+    text-decoration: underline;
+}
+    @media(max-width:450px){
+        .log{
+            width: 100%;
+            height: 100vh;
+            border: none;
+            border-radius: 0;
+        }
+
+    }
+
+
+
+
+
+ 

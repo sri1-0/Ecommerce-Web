@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(242, 198, 198);
+    }
+  #back{
+    background-image: url(../image/buypageback.webp);
+    background-position:center;
+    background-repeat: no-repeat;
+
+
+    }
+    #productimg {
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    td{
+        padding: 10px;
+    }
+    #container{
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: azure;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 30vh;
+        margin-left: 100px;
+        margin-right: 100px;
+     
+        position:relative;
+        opacity: 1;
+        background-color:rgba(101, 233, 44, 0.839) ;
+    }
+    button{
+        border-radius: 10px;
+    }
+    #pay{
+        text-decoration: none;
+        cursor:grabbing;
+    }
+    thead{
+        font-size: larger;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+     <div id="back">
+           <a href="Service.html" style="font-size: x-large;">back to products</a>
+    <div id="container" > 
+        <div id="imgarea"></div>
+        <table>
+            <thead>
+                
+                    <td >Name of the product</td>
+                    <td >Net price</td>
+                    <td >Discount</td>
+                    <td >total</td>
+                
+            </thead>
+            <tbody>
+               
+                <tr>
+                    <td id="productname"></td>
+                    <td id="netprice" ></td>
+                    <td id="Discount" >10 <span>%</span></td>
+                    <td id="total">total</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button><a href="onlinepay.html">online Payment</a></button></td>
+                    <td colspan="2"><button><a href="purchasecomplete.html" id="pay">cash on delivery</a></button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+     </div>
+    <script>
+        const singleproduct = JSON.parse(localStorage.getItem('singleproduct')) || [];
+
+        var imgsrc = document.getElementById('imgarea');
+        imgsrc.innerHTML = "";
+
+        var productname = document.getElementById('productname');
+
+        var netprice = document.getElementById('netprice');
+
+        var discount = parseInt(document.getElementById('Discount').textContent);
+        var original=0;
+        var total = document.getElementById('total');
+        if (singleproduct != null) {
+
+            singleproduct.forEach(element => {
+                productname.textContent = element.itemname;
+                original =parseInt(element.itemprice);
+                netprice.textContent=original;
+                total.textContent = original-(original/(discount));
+                imgsrc.innerHTML = `<img src="${element.itemimg}" id="productimg">
+            </img>`;
+
+            });
+        }
+    </script>
+</body>
+
+</html>

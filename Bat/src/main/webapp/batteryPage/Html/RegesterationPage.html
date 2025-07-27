@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registeration</title>
+    
+    <style>
+
+       table{
+        text-align: center;
+        width: 800px;
+        height: 800px;
+         background-color: aqua
+      }
+       h1 {
+        text-align: center;
+      }
+      form{
+        margin-top: 30px;
+        font-size: xx-large;
+        margin-left: 250px;
+       
+      }
+      label{
+        color: rgb(186, 26, 36);
+      }
+       .head {
+      display: flex;  
+      justify-content: space-between;
+
+    }
+
+    .head li {
+      display: inline;
+    }
+
+  .Com-Name{
+      color:rgb(11, 176, 226);
+      position: relative;
+      margin-left: 20px;
+      margin-top: 0px;
+      font-weight: bold;
+      font-size: 50px;
+      overflow: hidden;
+    }
+  .Com-Name::before {
+      position: absolute;
+      content: "";
+      background-color: rgb(229, 251, 121);
+      width: 0%;
+      height: 100%;
+      transition: 1s;
+     }
+
+    .Com-Name:hover::before {
+      background-color: transparent;
+      border-radius: 60%;
+      width:90%;
+      }
+
+    .Com-Name:hover{
+    color: rgb(229, 251, 121);
+   }
+   .head a{
+      color: rgb(11, 176, 226);
+      position: relative;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: x-large;
+      font-weight: bold;
+      overflow: hidden;
+    }
+
+    .head a::before {
+      position: absolute;
+      content: "";
+      background-color: rgb(229, 251, 121);
+      width: 0%;
+      height: 100%;
+      overflow: hidden;
+      transition: 1s;
+
+    }
+
+    .head a:hover::before {
+      background-color: transparent;
+      border-radius: 60%;
+      width:90%;
+      height: 100%;
+      z-index: 1;
+
+    }
+
+    .head a:hover,
+    .head a.active {
+    color: rgb(208, 245, 20);
+   }
+
+   body {
+      background-image: url("../image/bg.jpg");
+      background-position: center;
+      background-size: cover; 
+    }
+    #heading{
+      font-size: xx-large;
+      text-align: center;
+      padding-top: 20px;
+      color: yellow;
+      border: 2px solid black;
+      height: 50px;
+      width: 120vh;
+      margin-left: 40vh;
+      border-radius: 50%;
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="head">
+    <h1 class="Com-Name">This Is Company Name</h1>
+    <div>
+      <ol>
+        <li><a href="HomePage.html" class="active">Home</a></li>
+        <li><a href="Service.html">Service</a></li>
+        <li><a href="PerfectLogin.html">Login</a></li>
+        <li><a href="PerfecetContact.html">contact</a></li>
+      </ol>
+    </div>
+  </header>
+   <h2 id="heading">Register Here To Get More Deatails</h2>
+
+    <form action="/Bat/register" method="post"nsubmit="return check()">
+     <table>
+        <tbody>
+          <tr>
+            <td>
+              <label for=""> Name:</label>
+            </td>
+            <td>
+              <input type="text" name="username" id="name"
+            />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">Phone Number: </label>
+            </td>
+            <td>
+              <input type="number" name="number" id="" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for=""> Mail Id: </label>
+            </td>
+            <td>
+              <input type="mail" name="email" id="" />
+            </td>
+          </tr>
+           <tr>
+            <td>
+              <label for="">Password </label>
+            </td>
+            <td>
+              <input type="text" name="password" id="" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for=""> Gender: </label>
+            </td>
+            <td>
+              <input type="radio" name="Gender" value="Male" id="Male">
+              <label for="Male">Male
+              <input type="radio" name="Gender" value="Female" id="Female">
+              <label for="Female">Female
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="margin-left: 40 0px">
+              <input type="submit" name="" id="" style="background-color: burlywood;"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <script src="../Javascript/regestrationpage.js"></script>
+  </body>
+</html>

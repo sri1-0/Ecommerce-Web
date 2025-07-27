@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body{
+         padding-left: 40%;
+         background-color: rgba(2, 112, 57, 0.5);
+      }
+      .but{
+        border-radius: 10px;
+        border-color: burlywood;
+        border-width: 5px;
+        font-weight: 800;
+        cursor: grab;
+      }
+
+    </style>
+</head>
+<body onload="loadcart()">
+  <a href="Service.html">service</a>
+    <h1>your Cart</h1>
+    <p id="storagearea"></p>
+    <p >number of Quantity:: <span id="quant">0</span></p>
+    <p><strong>Total :  RS.<span id="total_price">0</span></strong></p>
+    <button onclick="clearstorage()" class="but">clear cart</button>
+
+   <a href="buy.html"> <button id="buy" onclick="storedata()" class="but">Buy All</button></a>
+</body>
+<script >
+function storedata(){
+  const storedata=JSON.parse(localStorage.getItem('bie')) || [];
+  const quant=document.getElementById('quant').innerHTML;
+  const total=document.getElementById('total_price').innerHTML;
+  storedata.push({quantity:quant,totalprice:total});
+  localStorage.setItem('bie',JSON.stringify(storedata));
+  
+}
+function clearstorage(){
+  localStorage.removeItem('productdeatail');
+  updateCartDisplay([]);
+}
+const storagecart=JSON.parse(localStorage.getItem('productdeatail'))||[];
+window.onload=()=> {
+  updateCartDisplay(storagecart);
+}
+function updateCartDisplay(storagecart) {
+  const cartContainer = document.getElementById('storagearea');
+  const totalPriceEl = document.getElementById('total_price');
+  const totalquan=document.getElementById('quant');
+  cartContainer.innerHTML = '';
+  let total = 0;
+  let validitems=0;
+ storagecart.forEach((item) => {
+    if(item&&item.itemname&&item.itemprice&&item.itemimg!=null)
+    {
+      cartContainer.innerHTML += `
+      <table id='tab'>
+        <tbody>
+        <tr>
+          <td><img src="${item.itemimg}" alt="item.itemname" width="100px,height="100px" ></td>
+          <td>${item.itemname}</td>
+          <td> - RS ${item.itemprice}</td>  
+        </tr>
+          </tbody>
+        </table>`;
+    total +=item.itemprice;
+    validitems++;
+  }});
+  totalPriceEl.textContent = total;
+  totalquan.textContent=validitems;
+  updateCartCount(validitems);
+}
+
+function updateCartCount(count) {
+  const cartCount = document.getElementById('cart-count');
+  if (cartCount) {
+    cartCount.textContent = count;
+  }
+}
+
+
+</script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+         background-image: url(../image/cartbackimg.jpg);
+         background-repeat: no-repeat;
+         background-size: 900px;
+         background-position-x: 350px;
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         font-size: large;
+        }
+        .container{
+            /* border: 2px solid black; */
+            border-radius: 20px;
+            height: 200px;
+            width: 300px;
+            margin-top: 180px;
+            margin-left: 500px;
+             display: flex;
+            justify-content: center;
+            background-color: rgba(112, 213, 168, 0.8);
+
+        }
+        .but{
+            border-radius: 10px;
+            border-width: 4px;
+            border-color: rgb(255, 127, 136);
+            font-weight: 800;
+            cursor: grab;
+        }
+
+</style>
+</head>
+<body onload="buy()">
+    <a href="cart.html">Back To Cart</a>
+    <div class="container">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        Item Quantity <p id="quantity"></p>
+                    </td>
+                    <td>
+                        Total Price <p id="price"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="onlinepay.html"><button class="but">Online Payment</button></a></td>
+                    <td><a href="purchasecomplete.html" onclick="clearcart()"><button class="but">Cash On Delivery</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<script>
+    const cart=JSON.parse(localStorage.getItem('bie'));
+    const quan= document.getElementById('quantity');
+    const  price = document.getElementById('price');
+   function buy(){
+     cart.forEach(element => {
+        quan.textContent=element.quantity;
+        price.textContent=element.totalprice;
+    });
+   }
+   function clearcart(){
+    const productdeatail=JSON.parse(localStorage.getItem('productdeatail'));
+    localStorage.removeItem('productdeatail');
+   }
+</script>
+</body>
+</html>

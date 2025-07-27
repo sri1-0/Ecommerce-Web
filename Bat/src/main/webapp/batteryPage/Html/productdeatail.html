@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .prodimg {
+            height: 70vh;
+            width: 76vh;
+        }
+
+        .item-img {
+            padding-left: 10px;
+            border: 2px solid black;
+            height: 600px;
+            width: 500px;
+        }
+
+        .pb {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        #price,
+        #battery {
+            border: 2px solid black;
+        }
+
+        .item-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 100px;
+
+
+        }
+        .item-img{
+         border-radius: 10px;
+         background-color: bisque;
+        }
+
+        .item-description {
+            border: 1px solid black;
+            height: 600px;
+            width: 500px;
+            margin-left: 10px;
+             background-color: aquamarine;
+            border-radius: 10px;
+        }
+
+        .item-name {
+            display: flex;
+            justify-content: center;
+        }
+
+        .item-table {
+            word-spacing: 5px;
+            font-size: xx-large;
+            width: 500px;
+            height: 500px;
+        }
+
+        .product {
+            display: inline-block;
+            border: 2px solid black;
+            height: 180px;
+            width: 180px;
+            background-color: antiquewhite;
+            padding: 50px;
+            margin: 20px;
+            margin-left: 20px;
+        }
+
+        .img {
+            height: 180px;
+            width: 180px;
+        }
+
+        .productpage {
+            color: black;
+            font-size: medium;
+        }
+
+        .productlayer1 {
+            padding-left: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        #companyname {
+            border: 1px solid black;
+            height: 100px;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 300%;
+            background-image: url("../image/blue\ batter.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            margin-top: -20px;
+            border: solid 5px black;
+            word-spacing: 300px;
+            font-size: larger;
+            background-color: brown;
+
+        }
+
+        #anchor {
+            text-decoration: none;
+            color: aliceblue;
+            font-size: x-large;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        svg {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            margin-left: 100px;
+            margin-top: 8px;
+
+        }
+        .but{
+            background-color: aquamarine;
+           
+            border-radius: 10px;
+            box-shadow: 3px 2px blue;
+        }
+        #add_cart{
+             margin-left: 200px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+
+<body onload="update_count()">
+    <h1 id="companyname">SRI AMMAN BATTERIES</h1>
+    <div class="nav">
+        <nav>
+            <a href="HomePage.html" id="anchor"> Home </a>
+            <a href="Service.html" id="anchor">Service </a>
+            <a href="PerfectLogin.html" id="anchor"> Login </a>
+            <a href="contact.html" id="anchor"> contact </a>
+            <a href="cart.html"><svg id="cart_logo" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z">
+                </svg></a>
+            <span id="cart-count" style="
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    background: white;
+    color: red;
+    border-radius: 50%;
+    padding: 1px 4px;
+    font-size: 15px;
+    font-weight:bold;
+  ">0</span>
+        </nav>
+    </div>
+    <div class="item-container">
+        <div class="item-img">
+           <div id="productimg">
+
+           </div>
+            <div class="pb">
+                <h1 class="but" id="price">RS 12000/-</h1>
+                <h1 class="but" id="battery">Battery</h1>
+            </div>
+            <button class="but" id="add_cart" onclick="additem(12000,'Battery')">add to cart</button>
+        </div>
+        <div class="item-description">
+            <h1 class="item-name">Battery</h1>
+            <table class="item-table">
+                <thead>
+                    <th>specification</th>
+                    <th>deatails</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>brand:</td>
+                        <td>Power Battery</td>
+                    </tr>
+                    <tr>
+                        <td>voltage:</td>
+                        <td>20v</td>
+                    </tr>
+                    <tr>
+                        <td>warranty:</td>
+                        <td>10 years</td>
+                    </tr>
+                    <tr>
+                        <td>mfd:</td>
+                        <td>2002</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <center>
+        <h2>Related Products</h2>
+    </center>
+    <div class="productlayer1">
+        <div class="product">
+            <table>
+                <img class="img" src="../image/Battery1.jpg" alt="img not available" />
+                <th><a href="productdeatail.html" class="productpage">AMARON CURRENT Short Tubular Battery</a></th>
+            </table>
+        </div>
+
+        <!-- second product -->
+
+        <div class="product">
+            <table>
+                <img class="img" src="../image/Battery1.jpg" alt="img not available" />
+
+                <thead>
+                    <th colspan="2">AMARON CURRENT Short Tubular Battery</th>
+                </thead>
+            </table>
+        </div>
+
+        <!-- third product -->
+        <div class="product">
+            <table>
+                <img class="img" src="../image/Battery1.jpg" alt="img not available" />
+
+                <thead>
+                    <th colspan="2">AMARON CURRENT Short Tubular Battery</th>
+                </thead>
+            
+            </table>
+        </div>
+        <!-- fourth product -->
+        <div class="product">
+            <table>
+                <img class="img" src="../image/Battery1.jpg" alt="img not available" />
+
+                <thead>
+                    <th colspan="2">AMARON CURRENT Short Tubular Battery</th>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <script>
+        const storage = JSON.parse(localStorage.getItem('productdeatail')) || [];
+         var productimg;
+        function additem(price, product) {
+            storage.push({ itemprice: price, itemname: product,itemimg:productimg });
+            localStorage.setItem('productdeatail', JSON.stringify(storage));
+            update_count();
+        }
+        const prodimg=JSON.parse(localStorage.getItem('service')) || [];
+        const prodimgarea=document.getElementById('productimg');
+        prodimgarea.innerHTML="";
+        function update_count() {
+            prodimg.forEach(element => {
+               productimg=element.img;
+                 prodimgarea.innerHTML=`
+            <img src="${element.img}" alt="no-img" class="prodimg">`
+            
+            });
+
+            
+            const count_area = document.getElementById('cart-count');
+            if (count_area) {
+                count_area.textContent = storage.length;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
